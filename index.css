@@ -1,0 +1,528 @@
+@font-face {
+  font-family: myFont;
+  src: url(chinese.msyh.ttf);
+}
+:root {
+  --ff-header: "Roboto-Regular, Helvetica Neue, Helvetica, Tahoma, Arial, Sans-serif";
+  --ff-body: "NotoSans-Regular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,PingFang SC,Microsoft YaHei,sans-serif";
+  --ff-search: "Roboto-Regular,Helvetica,sans-serif";
+  --ff-4: "Roboto-Regular,Helvetica Neue,Helvetica,Tahoma,Arial,Sans-serif";
+  --ff-5: Roboto-Regular, myFont, sans-serif;
+  --ff-notosans-regular: NotoSans-Regular, -apple-system;
+
+  --fs-1: 12px;
+  --fs-2: 14px;
+  --fs-3: 22px;
+  --fs-4: 10px;
+
+  --lh-1: 17px;
+  --lh-2: 25px;
+  --lh-3: 1.15;
+  --lh-4: 38px;
+  --lh-5: normal;
+
+  --fw-1: 200;
+  --fw-2: 300;
+  --fw-3: 400;
+  --fw-4: 500;
+
+  --clr-gray: #9e9e9e;
+  --clr-white: #fff;
+  --clr-neutral: #f5f5f5;
+  --clr-light-gray: #e7e8ec;
+  --clr-blue: #0f1568;
+  --clr-orange: #f57224;
+  --clr-black: #212121;
+  --clr-light-black: #424242;
+  --clr-red: #d3232a;
+  --clr-light-orange: #ffc3e3;
+  --clr-brown: #6c1d00;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-5);
+  font-size: var(--fs-1);
+  line-height: var(--lh-1);
+  background-color: var(--clr-light-gray);
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap);
+}
+.flex-inline {
+  display: flex inline;
+  gap: var(--gap);
+}
+
+.grid {
+  display: grid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+p {
+  margin: 0;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+/* Font size */
+.fs-1 {
+  font-size: var(--fs-4);
+}
+.fs-2 {
+  font-size: var(--fs-1);
+}
+.fs-3 {
+  font-size: var(--fs-2);
+}
+.fs-4 {
+  font-size: var(--fs-3);
+}
+
+/* Line height */
+.lh-1 {
+  line-height: 17px;
+}
+
+.lh-2 {
+  line-height: 25px;
+}
+
+.lh-3 {
+  line-height: 1.15;
+}
+.lh-4 {
+  line-height: 38px;
+}
+.lh-5 {
+  line-height: normal;
+}
+/* Font weight */
+.fw-1 {
+  font-weight: 200;
+}
+.fw-2 {
+  font-weight: 300;
+}
+.fw-3 {
+  font-weight: 400;
+}
+
+/* Text color */
+.text-gray {
+  color: var(--clr-gray);
+}
+.text-light-gray {
+  color: var(--clr-light-gray);
+}
+.text-orange {
+  color: var(--clr-orange);
+}
+.text-red {
+  color: var(--clr-red);
+}
+.text-blue {
+  color: var(--clr-blue);
+}
+.text-black {
+  color: var(--clr-black);
+}
+.text-light-black {
+  color: var(--clr-light-black);
+}
+.text-white {
+  color: var(--clr-white);
+}
+.text-brown {
+  color: var(--clr-brown);
+}
+
+/* Background color */
+.bg-white {
+  background-color: var(--clr-white);
+}
+.bg-gray {
+  background-color: var(--clr-gray);
+}
+.bg-light-gray {
+  background-color: var(--clr-light-gray);
+}
+.bg-orange {
+  background-color: var(--clr-orange);
+}
+.bg-red {
+  background-color: var(--clr-red);
+}
+.bg-blue {
+  background-color: var(--clr-blue);
+}
+.bg-black {
+  background-color: var(--clr-black);
+}
+.bg-light-black {
+  background-color: var(--clr-light-black);
+}
+.bg-neutral {
+  background-color: var(--clr-neutral);
+}
+
+/* Font family */
+.ff-notosans-regular {
+  font-family: var(--ff-notosans-regular);
+}
+
+.flow {
+  margin-top: var(--flow-gap, 1rem);
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+/* Top header */
+.lazada-header > ul {
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  font-family: var(--ff-1);
+  list-style-type: none;
+  --gap: 1.5rem;
+  cursor: pointer;
+  font-size: minmax(5px, 10px);
+}
+.search-button > * {
+  width: 40px;
+  aspect-ratio: 1;
+}
+
+/* Search bar*/
+.lazada-search {
+  margin-inline: 0;
+  padding-inline: 0;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 100%;
+  --gap: 1rem;
+}
+.lazada-search > * + * {
+  margin-left: 1rem;
+}
+.lazada-search > .lazada-icon img {
+  width: clamp(4rem, 8vw + 1rem, 13rem);
+}
+.lazada-search > .lazada-cart img {
+  width: 2rem;
+}
+.lazada-search > .lazada-wallet img {
+  width: clamp(6rem, 8vw + 1rem, 13rem);
+}
+.search {
+  --gap: 0;
+  position: relative;
+  flex-grow: 1;
+}
+.search > .search-input {
+  border: none;
+  padding: 1rem;
+  background-color: var(--clr-light-gray);
+  flex-grow: 1;
+}
+.search > .search-button {
+  background-color: var(--clr-orange);
+  border: none;
+}
+.search > .search-button img {
+  padding: 0.6rem;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+/* Promotion */
+.lazada-promotions {
+  flex-basis: 100%;
+  justify-content: center;
+  --gap: 0.5rem;
+}
+.lazada-promotions > .lazada-sliders {
+  flex-grow: 1;
+  flex-basis: 10%;
+}
+.lazada-promotions > .lazada-sliders > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Promotion - More Info */
+.lazada-promotions > .lazada-more-info {
+  background: linear-gradient(90deg, #fff, hsla(0, 0%, 100%, 0)),
+    linear-gradient(179.27deg, #ffedd6 0.83%, #ffc3e3 46.78%, #fff 99.57%),
+    linear-gradient(0deg, #fff, #fff);
+  flex-direction: column;
+  background-repeat: no-repeat;
+  max-width: 13rem;
+  padding: 0.3rem;
+  flex-grow: 1;
+  --gap: 0.5rem;
+}
+.lazada-promotions > .lazada-more-info > .body > *:first-child {
+  margin: 0.3rem;
+}
+.lazada-promotions > .lazada-more-info > .body > * + * {
+  padding: 0.5rem;
+}
+.lazada-promotions > .lazada-more-info > * > img {
+  width: 2rem;
+}
+.lazada-promotions > .lazada-more-info > .body > * > img {
+  width: 2rem;
+}
+.lazada-promotions .lazada-more-info > .footer {
+  --gap: 0.1rem;
+}
+.lazada-promotions > .lazada-more-info > .footer > * > img {
+  width: 5rem;
+}
+.lazada-promotions > .lazada-more-info > .footer > img {
+  width: 5rem;
+}
+
+.lazada-promotions > .lazada-more-info > .header {
+  align-items: center;
+}
+
+.lazada-promotions > .lazada-more-info > .body {
+  background-image: url("image/folder-background.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  flex-direction: column;
+}
+.lazada-promotions > .lazada-more-info > .footer {
+  align-items: center;
+  --gap: 1rem;
+}
+.lazada-promotions > .lazada-more-info > .footer > * {
+  width: 8rem;
+}
+
+/* Options */
+.options {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  --gap: 0rem;
+}
+.options > * {
+  width: 100%;
+  padding-left: 1.5rem;
+}
+.options a {
+  flex-wrap: wrap;
+}
+.options > * + * {
+  border-left: 1px solid var(--clr-light-gray);
+}
+.options > * > img {
+  width: 120px;
+  height: 18px;
+}
+.strikethrough {
+  text-decoration: line-through;
+}
+/* Product */
+.product-container {
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.product-container > h2 {
+  flex-basis: 100%;
+}
+.product {
+  flex-basis: 15%;
+}
+
+.product > img {
+  width: 100%;
+}
+
+.product-container > *:nth-child(2) {
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  width: 100%;
+}
+.product-container > *:nth-child(2) > .header {
+  padding: 1rem;
+  width: 100%;
+  --gap: 1rem;
+  border-bottom: 1px solid var(--clr-light-gray);
+  align-items: center;
+}
+.countdown-number {
+  background-color: var(--clr-red);
+  color: var(--clr-white);
+  padding: 0.5rem;
+  font-size: clamp(0.7vw, 4vw + 0.1vw, 1vw);
+  margin: 0.3rem;
+}
+.product-container > * {
+  flex-basis: 100%;
+}
+.product-container > *:nth-child(2) > .header > *:nth-child(2) {
+  flex-grow: 9999;
+}
+.product-container > *:nth-child(2) > .header > *:nth-child(1) {
+  flex-grow: 1;
+}
+.product-container > *:nth-child(2) > .header > *:nth-child(3) {
+  flex-grow: 1;
+}
+.product-container > *:nth-child(2) > .items {
+  width: 100%;
+  flex-wrap: wrap;
+}
+/* Items within the card container */
+.product-container > *:nth-child(2) > .items > * {
+  --item-per-row1: calc(var(--item-per-row) + 1);
+  --flex-basis: calc(100% / var(--item-per-row1));
+  flex-basis: var(--flex-basis, 25%);
+  max-width: var(--item-width, none);
+  flex-grow: 1;
+  padding-left: var(--item-gap, 0.5rem);
+}
+/* Item details within the items of card container */
+.product-container > *:nth-child(2) > .items > .product {
+  flex-direction: column;
+  width: 100%;
+}
+
+.product-container > *:nth-child(2) > .items > .product > * {
+  flex-basis: 100%;
+  flex-grow: 1;
+}
+
+.button-primary {
+  background-color: transparent;
+  border: 1px solid var(--clr-border, --clr-orange);
+  color: var(--clr-text, --clr-orange);
+  padding: 0.5rem;
+}
+.button-primary--tambah-lagi {
+  flex-basis: 40%;
+}
+.container--banner > * {
+  object-fit: contain;
+}
+.container--banner {
+  flex-basis: 100%;
+}
+.container--banner > img {
+  width: 32%;
+}
+
+.container--tambah-lagi {
+  border-bottom: 1px solid var(--clr-gray);
+  padding-bottom: 2rem;
+}
+
+.container--footer {
+  flex-direction: row;
+  align-content: flex-start;
+  width: 100%;
+}
+.container--footer > * {
+}
+.container--footer > ul {
+  list-style-type: none;
+}
+.container--footer > *:nth-child(1) {
+  flex-basis: 30%;
+}
+.container--footer > *:nth-child(2) {
+  flex-basis: 30%;
+}
+.container--footer > *:nth-child(3) {
+  flex-basis: 40%;
+}
+.container--footer > .right {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 5%;
+  width: 100%;
+}
+.container--footer > .right > *:not(img) {
+  flex-basis: 100%;
+}
+.container--footer > .right > *:nth-child(2) {
+  max-width: 6rem;
+  flex-direction: column;
+  align-content: flex-start;
+  align-self: flex-start;
+}
+.container--footer > .right > img {
+  width: 8%;
+  align-self: flex-start;
+}
+
+.container--footer > .right > *:last-child {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-basis: 100%;
+  max-width: 20rem;
+  flex-grow: 1;
+}
+
+.container--footer > .right > *:last-child > * {
+  max-width: 40%;
+
+  flex-grow: 1;
+}
+.container--service {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container--service > * {
+  flex-basis: 100%;
+  margin-top: 1rem;
+}
+.container--lazada-footer-info {
+  padding: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 30rem;
+  align-items: baseline;
+}
+
+.container--lazada-footer-info > * {
+  flex-basis: 100%;
+}

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="flex lazada-header bg-light-gray">
+      <ul class="uppercase flex fs-1 text-gray">
+        <li>Maklum Balas</li>
+        <li>Dapatkan Aplikasi</li>
+        <li>Menjual di Lazada</li>
+        <li>Knidmat Pelanggan</li>
+        <li>Mengesan Pesanan</li>
+        <li>Log Masuk</li>
+        <li>Daftar</li>
+        <li>Change Language</li>
+      </ul>
+    </div>
+    <section class="search bg-white">
+      <div class="flex container">
+        <div class="flex lazada-search">
+          <a class="lazada-icon"
+            ><img
+              src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1HKyxaMFY.1VjSZFqXXadbXXa.png"
+          /></a>
+          <div class="flex search">
+            <input class="search-input" placeholder="Cari di Lazada" />
+            <button class="search-button">
+              <img src="image/magnifying-glass.png" />
+            </button>
+          </div>
+          <a class="lazada-cart">
+            <img src="image/cart.png" />
+          </a>
+          <a class="lazada-wallet"><img src="image/lazada-wallet.png" /></a>
+        </div>
+      </div>
+    </section>
+    <section class="promotion bg-light-gray">
+      <div class="flex container">
+        <div class="flex lazada-promotions">
+          <div class="lazada-sliders">
+            <img src="image/slider1.webp" />
+          </div>
+          <div class="flex lazada-more-info text-white fw-3 fs-1 lh-3">
+            <div class="header text-brown flex uppercase fw-3 fs-1">
+              <img src="image/lazada-icon.webp" />
+              <span>Try Lazada App</span>
+            </div>
+            <div class="flex body fs-3">
+              <span>*4.8 Rated</span>
+              <span>Get the Lazada App to Enjoy</span>
+              <div class="flex">
+                <img src="image/delivery.webp" />
+                <span>Free Shipping</span>
+              </div>
+              <div class="flex">
+                <img src="image/ticket.webp" />
+                <span>Exclusive Vouchers</span>
+              </div>
+            </div>
+            <div class="footer flex">
+              <img src="image/qrcode.webp" />
+              <div>
+                <img src="image/appstore.png" />
+                <img src="image/playstore.png" />
+              </div>
+            </div>
+            <span class="text-gray fs-2"
+              >Muat turun aplikasi sekarang dengan mengimbas kod QR</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="items bg-neutral flow">
+      <div class="container lazada-info bg-white options flex text-gray">
+        <a type="button" class="flex-inline">
+          <img src="image/lazmall.webp" />
+          <span>100% Authentic Brands</span>
+        </a>
+        <a type="button" class="flex-inline">
+          <img src="image/freeshipping.webp" />
+          <span>Free & Fast Delivery</span>
+        </a>
+        <a type="button" class="flex-inline">
+          <img src="image/topup.webp" />
+          <span>Top Up, Bill, Coupon & eStore</span>
+        </a>
+        <a type="button" class="flex-inline">
+          <img src="image/vouchers.webp" />
+          <span>Collect & Redeem Now!</span>
+        </a>
+      </div>
+      <div class="container product-container flow" style="--flow-gap: 2rem">
+        <h2>Flash Sale</h2>
+        <div class="flex bg-white flow" style="--flow-gap: 0.5rem">
+          <div class="flex header">
+            <h3 class="text-red">Jualan murah sekarang!</h3>
+            <div class="countdown">
+              <span>Tamat pada </span>
+              <span class="countdown-number">11</span>:
+              <span class="countdown-number">41</span>:
+              <span class="countdown-number">52</span>
+            </div>
+            <input
+              type="button"
+              class="uppercase button-primary"
+              value="Belanja Semua Produk"
+              style="--clr-border: orange; --clr-text: orange"
+            />
+          </div>
+          <div class="flex items" style="--gap: 0.8rem; --item-per-row: 4">
+            <div class="product flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container product-container flow" style="--flow-gap: 2rem">
+        <h2>Laz Mall</h2>
+        <div class="flex flow" style="--flow-gap: 0.5rem">
+          <div class="flex items" style="--gap: 0.8rem; --item-per-row: 4">
+            <div class="product bg-white bg-white flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/product.webp" />
+              <span>Inventory tempat + COD</span>
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container product-container flow"
+        style="--flow-gap: 2rem; --text-align: center; --item-per-row: 8"
+      >
+        <h2>Kategori</h2>
+        <div class="flex flow" style="--flow-gap: 0.5rem; --item-gap: 0">
+          <div class="flex items" style="--gap: 0.1rem">
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+            <div class="product bg-white flex">
+              <img src="image/telephone.webp" />
+              <span>Telefon Bimbit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container product-container flow"
+        style="
+          --flow-gap: 2rem;
+          --item-gap: 0.5rem;
+          --text-align: left;
+          --item-per-row: 6;
+        "
+      >
+        <h2>Khas Untukmu</h2>
+        <div class="flex flow" style="--gap: 0.5rem; --flow-gap: 0.5rem">
+          <div class="flex items" style="--gap: 0rem">
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+            <div class="product flex bg-white">
+              <img src="image/Hair Clipper.webp" />
+              <span>Inventory tempat + COD</span>
+
+              <span class="text-orange">RM16.20</span>
+              <span class="strikethrough text-gray">RM36.00</span>
+              <span class="text-black ff-notosans-regular">-55%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container container--tambah-lagi">
+        <input
+          type="button"
+          class="button-primary button-primary--tambah-lagi flow"
+          value="Tambah Lagi"
+          style="--clr-border: blue; --clr-text: blue; --flow-gap: 3rem"
+        />
+      </div>
+      <div
+        class="container flex container--banner flow"
+        style="gap: 1rem; flow-gap: 1rem"
+      >
+        <img src="image/banner.webp" />
+        <img src="image/banner.webp" />
+        <img src="image/banner.webp" />
+      </div>
+      <div
+        class="container flex container--footer flow text-black fs-1"
+        style="--flow-gap: 2rem"
+      >
+        <ul>
+          <h4>Customer Care</h4>
+          <li>Customer Care</li>
+          <li>Help Center</li>
+          <li>How to Buy</li>
+          <li>Shipping & Delivery</li>
+          <li>International Product Policy</li>
+          <li>How to Return</li>
+          <li>Question?</li>
+          <li>Contact Us</li>
+        </ul>
+        <ul>
+          <h4>Lazada</h4>
+          <li>About Lazada</li>
+          <li>Afﬁliate Program</li>
+          <li>Careers</li>
+          <li>Terms & Conditions</li>
+          <li>Privacy Policy</li>
+          <li>Campaign Terms & Conditions</li>
+          <li>Intellectual Property Protection</li>
+        </ul>
+        <div class="flex right flow" style="--gap: 1rem; --flow-gap: 2rem">
+          <img src="image/lazada-icon.webp" />
+          <div class="flex" style="--gap: 0">
+            <span class="text-orange">Always Better</span>
+            <span>Download the App</span>
+          </div>
+          <div class="flex" style="--gap: 0.5rem">
+            <img src="image/black playstore.png" />
+            <img src="image/black playstore.png" />
+            <img src="image/black playstore.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white">
+      <div class="container flex container--service" style="--gap: 3rem">
+        <div
+          class="product-container flex"
+          style="--item-width: 3.5rem; --gap: 0.5rem"
+        >
+          <span>Payment Methods</span>
+          <div class="flex">
+            <div class="flex items">
+              <img src="image/lazada-wallet-icon.png" />
+              <img src="image/lazada-wallet-icon.png" />
+              <img src="image/lazada-wallet-icon.png" />
+              <img src="image/lazada-wallet-icon.png" />
+              <img src="image/lazada-wallet-icon.png" />
+              <img src="image/lazada-wallet-icon.png" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-container"
+          style="--item-width: 5rem; --gap: 0.3rem"
+        >
+          <span>Payment Methods</span>
+          <div class="flex">
+            <div class="flex items">
+              <img src="image/lazada-logistics.png" />
+              <img src="image/lazada-logistics.png" />
+              <img src="image/lazada-logistics.png" />
+              <img src="image/lazada-logistics.png" />
+              <img src="image/lazada-logistics.png" />
+              <img src="image/lazada-logistics.png" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-container"
+          style="--item-per-row: 4; --item-width: 5rem; --gap: 0.1rem"
+        >
+          <span>Payment Methods</span>
+          <div class="flex flow">
+            <div class="flex items">
+              <img src="image/pcidss.png" />
+              <img src="image/pcidss.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="bg-light-gray">
+      <div class="container container--lazada-footer-info">
+        <span>The Leading Online Shopping Mall in Malaysia </span>
+        <span
+          >Lazada Malaysia "(Ecart Services Malaysia Sdn Bhd (983365-K)" is
+          pioneering e-commerce across some of the fastest growing countries in
+          the world by offering a fast, secure and convenient online shopping
+          experience with a broad product offering in categories ranging from
+          fashion, consumer electronics to household goods, toys and sports
+          equipment. Lazada is always striving to offer its customers the best
+          possible offering – including multiple payment options, free returns
+          and extensive customer service and warranty commitments. We are
+          constantly expanding our product range as well like recently the
+          Fashion and Watches category. We offer the best selection of quality
+          products you'll find anywhere all at your fingertips. Online shopping
+          in Malaysia has never been this easy! Stay connected and stay tuned
+          for new offers and deals we have from time to time. Remember, everyday
+          is a shopping day on Lazada! Last but not the least, we want to
+          emphasize that we're more than just one of the Malaysia's largest
+          online ecommerce stores. It is our highest priority here at
+          Lazada.com.my to create the best online shopping experience for every
+          customer in Malaysia. So start your online shopping and remember if
+          you have questions we are just a phone call or email away.</span
+        >
+        <span>Easy Shopping</span>
+        <span
+          >It has been our goal throughout the years to provide an “Effortless
+          shopping” experience for every customer, promising a hassle-free,
+          convenient, and positive online shopping experience. Our extensive
+          offerings combined with our user-freindly Website and App allows
+          customers to find everything they need. Customers can search for a
+          produuct through brand, category, or keywords, check out detailed
+          descriptions as well as genuine customer reviews to help make purchase
+          decisions. On top of that with LazMall, customers are guaranteed 100%
+          Authentic products with 15-days free easy returns.</span
+        >
+        <span>The Biggest Sales, Best Vouchers & Top Promos</span>
+        <span
+          >Check in daily on Lazada for attractive deals on your favorite items.
+          Buy more save more, collect vouchers, stack them and get a bang for
+          your buck. Get your Lazada Wallet ready for incredible deals during
+          our campaign periods including Birthday Sale , Mid Year Sale, 9.9 ,
+          10.10 and Lazada’s most anticipated online shopping festivals: 11.11
+          and 12.12 Sales! Check out Every Day Low Price too for daily low price
+          deals. Last but not the least, we want to emphasize that we're more
+          than just one of the Malaysia's largest online ecommerce stores. It is
+          our highest priority here at Lazada.com.my to create the best online
+          shopping experience for every customer in Malaysia. So start your
+          online shopping and remember if you have questions we are just a phone
+          call or email away.</span
+        >
+        <span>WHAT'S NEW?</span>
+        <span
+          >LazMall , Tmall Signature , Vouchers ,Fashion Deals , iPhone X deals
+          ,Samsung Galaxy Note 8 , New Surface Pro , Nexus 6p , Samsung Galaxy
+          S9 ,Samsung Galaxy S8 , Samsung Galaxy S8+ , Hand Fidget Spinner</span
+        >
+        <span>Top Categories & Brands</span>
+        <span
+          >MOBILES & TABLETS Apple iPhone , Samsung , Xiaomi , Huawei , Honor ,
+          Nokia , OnePlus , Sony , Lenovo , Vivo , OPPO , Realme , Redmi
+          COMPUTERS & LAPTOPS Microsoft , Acer , Logitech , Razer , HP , Dell ,
+          Toshiba , MSI , Lenovo , ASUS , CORSAIR , TP-Link , Ugreen TV,
+          AUDIO/VIDEO, GAMING & GADGETS Sony TV , Samsung TV , LG TV , Panasonic
+          TV , Sharp , JBL , Harman Kardon , Vinnfier , Bose , Nintendo Switch ,
+          Playstation CAMERAS & DRONES Canon , Nikon , Olympus , DJI , Fujifilm
+          , Sony , Selens , Sigma , GoPro , Andoer , IP Security Cameras HOME
+          APPLIANCES Air Conditioner , Refrigerator , Washing Machine , Water
+          Purifier , Water Heater , Bread Maker , Juicer , Coffee Machine ,
+          Vacuum Cleaner , Electric Grills , Irons , Toasters FASHION COACH ,
+          Vans , ZANZEA , Levis , Calvin Klein , ELLE , Padini , ALDO ,
+          Timberland , Bonia , Converse , Men's Muslim Wear , Women's Muslim
+          Wear</span
+        >
+      </div>
+    </section> -->
+  </body>
+</html>
