@@ -1,0 +1,10 @@
+1) the list of items in mobile, if go next line, will grow like shit, fix that
+2) make the item container in mobile   
+    1) show icon in header, and show the countdown at the right
+    2) show different color
+    3) show the sold progress bar
+3) make the item container able to scroll
+4) make the items within able to have border
+5) aadd the navigation with icons and text for mobile
+6) make the above stick
+7) add the web navigation for mobile at the bottom
