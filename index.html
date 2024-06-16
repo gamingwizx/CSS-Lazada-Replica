@@ -17,7 +17,7 @@
     />
   </head>
   <body>
-    <div class="flex lazada-header bg-light-gray">
+    <div class="flex lazada-header bg-light-gray" isDesktop>
       <ul class="uppercase flex fs-1 text-gray">
         <li>Maklum Balas</li>
         <li>Dapatkan Aplikasi</li>
@@ -33,19 +33,24 @@
       <div class="flex container">
         <div class="flex lazada-search">
           <a class="lazada-icon"
-            ><img
+          isDesktop><img
               src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1HKyxaMFY.1VjSZFqXXadbXXa.png"
           /></a>
           <div class="flex search">
-            <input class="search-input" placeholder="Cari di Lazada" />
-            <button class="search-button">
+            <img class="search-icon" src="image/mobile-magnifying-glass.png" isMobile />
+            <input class="search-input fs-5 text-gray" placeholder="Cari di Lazada" />
+            <div class="search-button" isMobile>
+              <input type="button" class="text-white fs-5 fw-4" value="Search">
+
+            </div>
+            <button title="search" class="search-button" isDesktop>
               <img src="image/magnifying-glass.png" />
             </button>
           </div>
-          <a class="lazada-cart">
-            <img src="image/cart.png" />
+          <a class="lazada-cart" isDesktop>
+            <img src="image/cart.png" isDesktop/>
           </a>
-          <a class="lazada-wallet"><img src="image/lazada-wallet.png" /></a>
+          <a class="lazada-wallet" isDesktop><img src="image/lazada-wallet.png" /></a>
         </div>
       </div>
     </section>
@@ -55,7 +60,7 @@
           <div class="lazada-sliders">
             <img src="image/slider1.webp" />
           </div>
-          <div class="flex lazada-more-info text-white fw-3 fs-1 lh-3">
+          <div class="flex lazada-more-info text-white fw-3 fs-1 lh-3" isDesktop>
             <div class="header text-brown flex uppercase fw-3 fs-1">
               <img src="image/lazada-icon.webp" />
               <span>Try Lazada App</span>
@@ -87,7 +92,7 @@
       </div>
     </section>
     <section class="items bg-neutral flow">
-      <div class="container lazada-info bg-white options flex text-gray">
+      <div class="container lazada-info bg-white options flex text-gray" isDesktop>
         <a type="button" class="flex-inline">
           <img src="image/lazmall.webp" />
           <span>100% Authentic Brands</span>

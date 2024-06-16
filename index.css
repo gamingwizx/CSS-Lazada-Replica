@@ -14,6 +14,7 @@
   --fs-2: 14px;
   --fs-3: 22px;
   --fs-4: 10px;
+  --fs-5: 3.2vw;
 
   --lh-1: 17px;
   --lh-2: 25px;
@@ -37,6 +38,7 @@
   --clr-red: #d3232a;
   --clr-light-orange: #ffc3e3;
   --clr-brown: #6c1d00;
+  --clr-brand-pink: #fe4960;
 }
 *,
 *::before,
@@ -96,6 +98,9 @@ p {
 }
 .fs-4 {
   font-size: var(--fs-3);
+}
+.fs-5 {
+  font-size: var(--fs-5);
 }
 
 /* Line height */
@@ -213,16 +218,15 @@ p {
   cursor: pointer;
   font-size: minmax(5px, 10px);
 }
-.search-button > * {
+.search-button[isDesktop] > * {
   width: 40px;
   aspect-ratio: 1;
 }
 
-/* Search bar*/
 .lazada-search {
   margin-inline: 0;
   padding-inline: 0;
-  padding: 2rem 0;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -230,8 +234,9 @@ p {
   --gap: 1rem;
 }
 .lazada-search > * + * {
-  margin-left: 1rem;
+  margin-left: 0;
 }
+
 .lazada-search > .lazada-icon img {
   width: clamp(4rem, 8vw + 1rem, 13rem);
 }
@@ -245,21 +250,67 @@ p {
   --gap: 0;
   position: relative;
   flex-grow: 1;
+  width: 100%;
 }
 .search > .search-input {
   border: none;
-  padding: 1rem;
-  background-color: var(--clr-light-gray);
+  padding: 0.7rem;
+  background: transparent;
   flex-grow: 1;
+  flex-basis: 100%;
 }
-.search > .search-button {
+.search > .search-button[isDesktop] {
   background-color: var(--clr-orange);
   border: none;
 }
-.search > .search-button img {
-  padding: 0.6rem;
+.search > .search-button[isDesktop] > img {
   -webkit-filter: invert(100%);
   filter: invert(100%);
+  padding: 0.6rem;
+}
+*[isMobile] {
+  display: none;
+}
+@media (max-width: 50em) {
+  *[isDesktop] {
+    display: none;
+  }
+  *[isMobile] {
+    display: block;
+  }
+  .lazada-search {
+    background-image: url("image/mobile-search-background.webp");
+
+  }
+  .lazada-search > .search{
+    border-radius: 5rem;
+    border: 1px solid var(--clr-brand-pink);
+    background-color: var(--clr-white);
+    font-size: var(--fs-5);
+    width: 100%;
+    height: 8.8vw;
+    padding: 0.3rem;
+    align-items: center;
+  }  
+  .lazada-search > .search > .search-icon {
+    width: 5.6vw;
+    height: 5.6vw;
+  }
+  .lazada-search > .search > .search-button[isMobile] {
+    background: linear-gradient(90deg,#ff933f,#f93782 69%,#f93782);
+    border-radius: 5rem;
+    flex-basis: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch
+  }
+  .lazada-search > .search > .search-button[isMobile] > input {
+    border: none;
+    background: transparent;
+
+  }
+
 }
 
 /* Promotion */
