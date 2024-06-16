@@ -38,9 +38,9 @@
           /></a>
           <div class="flex search">
             <img class="search-icon" src="image/mobile-magnifying-glass.png" isMobile />
-            <input class="search-input fs-5 text-gray" placeholder="Cari di Lazada" />
+            <input class="search-input fs-6 text-gray" placeholder="Cari di Lazada" />
             <div class="search-button" isMobile>
-              <input type="button" class="text-white fs-5 fw-4" value="Search">
+              <input type="button" class="text-white fs-7 fw-4" value="Search">
 
             </div>
             <button title="search" class="search-button" isDesktop>
@@ -92,6 +92,7 @@
       </div>
     </section>
     <section class="items bg-neutral flow">
+     
       <div class="container lazada-info bg-white options flex text-gray" isDesktop>
         <a type="button" class="flex-inline">
           <img src="image/lazmall.webp" />
@@ -110,48 +111,77 @@
           <span>Collect & Redeem Now!</span>
         </a>
       </div>
-      <div class="container product-container flow" style="--flow-gap: 2rem">
-        <h2>Flash Sale</h2>
+      <div class="container item-container flow">
+        <div class="items flex" style="--gap: 0.8rem; --item-per-row: 6">
+          <div class="item flex">
+            <img src="image/mobile-options.png" />
+            <span>Earn Coins</span>
+          </div>
+          <div class="item flex">
+            <img src="image/mobile-options.png" />
+            <span>Earn Coins</span>
+          </div>
+          <div class="item flex">
+            <img src="image/mobile-options.png" />
+            <span>Earn Coins</span>
+          </div>
+          <div class="item flex">
+            <img src="image/mobile-options.png" />
+            <span>Earn Coins</span>
+          </div>
+          <div class="item flex">
+            <img src="image/mobile-options.png" />
+            <span>Earn Coins</span>
+          </div>
+          <div class="item flex">
+            <img src="image/mobile-options.png" />
+            <span>Earn Coins</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="container item-container flow" isDesktop>
+        <h2 class="fs-5">Flash Sale</h2>
         <div class="flex bg-white flow" style="--flow-gap: 0.5rem">
-          <div class="flex header">
-            <h3 class="text-red">Jualan murah sekarang!</h3>
+          <div class="flex header" isDesktop>
+            <h3 class="text-red fs-6">Jualan murah sekarang!</h3>
             <div class="countdown">
-              <span>Tamat pada </span>
-              <span class="countdown-number">11</span>:
-              <span class="countdown-number">41</span>:
-              <span class="countdown-number">52</span>
+              <span class="fs-6">Tamat pada </span>
+              <span class="countdown-number fs-6">11</span>:
+              <span class="countdown-number fs-6">41</span>:
+              <span class="countdown-number fs-6">52</span>
             </div>
             <input
               type="button"
-              class="uppercase button-primary"
+              class="uppercase fs-6 button-primary"
               value="Belanja Semua Produk"
               style="--clr-border: orange; --clr-text: orange"
             />
           </div>
           <div class="flex items" style="--gap: 0.8rem; --item-per-row: 4">
-            <div class="product flex">
-              <img src="image/product.webp" />
+            <div class="item flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex">
-              <img src="image/product.webp" />
+            <div class="item flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex">
-              <img src="image/product.webp" />
+            <div class="item flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex">
-              <img src="image/product.webp" />
+            <div class="item flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
@@ -160,61 +190,61 @@
           </div>
         </div>
       </div>
-      <div class="container product-container flow" style="--flow-gap: 2rem">
+      <div class="container item-container flow" isDesktop>
         <h2>Laz Mall</h2>
         <div class="flex flow" style="--flow-gap: 0.5rem">
           <div class="flex items" style="--gap: 0.8rem; --item-per-row: 4">
-            <div class="product bg-white bg-white flex">
-              <img src="image/product.webp" />
+            <div class="item bg-white bg-white flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product bg-white flex">
-              <img src="image/product.webp" />
+            <div class="item bg-white flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product bg-white flex">
-              <img src="image/product.webp" />
+            <div class="item bg-white flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product bg-white flex">
-              <img src="image/product.webp" />
+            <div class="item bg-white flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product bg-white flex">
-              <img src="image/product.webp" />
+            <div class="item bg-white flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product bg-white flex">
-              <img src="image/product.webp" />
+            <div class="item bg-white flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product bg-white flex">
-              <img src="image/product.webp" />
+            <div class="item bg-white flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product bg-white flex">
-              <img src="image/product.webp" />
+            <div class="item bg-white flex">
+              <img src="image/item.webp" />
               <span>Inventory tempat + COD</span>
               <span class="text-orange">RM16.20</span>
               <span class="strikethrough text-gray">RM36.00</span>
@@ -224,73 +254,74 @@
         </div>
       </div>
       <div
-        class="container product-container flow"
+        class="container item-container flow"
         style="--flow-gap: 2rem; --text-align: center; --item-per-row: 8"
+        isDesktop
       >
         <h2>Kategori</h2>
         <div class="flex flow" style="--flow-gap: 0.5rem; --item-gap: 0">
           <div class="flex items" style="--gap: 0.1rem">
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
-            <div class="product bg-white flex">
+            <div class="item bg-white flex">
               <img src="image/telephone.webp" />
               <span>Telefon Bimbit</span>
             </div>
@@ -298,18 +329,19 @@
         </div>
       </div>
       <div
-        class="container product-container flow"
+        class="container item-container flow"
         style="
           --flow-gap: 2rem;
           --item-gap: 0.5rem;
           --text-align: left;
           --item-per-row: 6;
         "
+        isDesktop
       >
         <h2>Khas Untukmu</h2>
         <div class="flex flow" style="--gap: 0.5rem; --flow-gap: 0.5rem">
           <div class="flex items" style="--gap: 0rem">
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -317,7 +349,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -325,7 +357,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -333,7 +365,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -341,7 +373,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -349,7 +381,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -357,7 +389,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -365,7 +397,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -373,7 +405,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -381,7 +413,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -389,7 +421,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -397,7 +429,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -405,7 +437,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -413,7 +445,7 @@
               <span class="strikethrough text-gray">RM36.00</span>
               <span class="text-black ff-notosans-regular">-55%</span>
             </div>
-            <div class="product flex bg-white">
+            <div class="item flex bg-white">
               <img src="image/Hair Clipper.webp" />
               <span>Inventory tempat + COD</span>
 
@@ -450,7 +482,7 @@
           <li>Help Center</li>
           <li>How to Buy</li>
           <li>Shipping & Delivery</li>
-          <li>International Product Policy</li>
+          <li>International item Policy</li>
           <li>How to Return</li>
           <li>Question?</li>
           <li>Contact Us</li>
@@ -482,46 +514,46 @@
     <section class="bg-white">
       <div class="container flex container--service" style="--gap: 3rem">
         <div
-          class="product-container flex"
-          style="--item-width: 3.5rem; --gap: 0.5rem"
+          class="item-container flex"
+          style="--item-width: 3rem; --gap: 0.5rem"
         >
           <span>Payment Methods</span>
           <div class="flex">
             <div class="flex items">
-              <img src="image/lazada-wallet-icon.png" />
-              <img src="image/lazada-wallet-icon.png" />
-              <img src="image/lazada-wallet-icon.png" />
-              <img src="image/lazada-wallet-icon.png" />
-              <img src="image/lazada-wallet-icon.png" />
-              <img src="image/lazada-wallet-icon.png" />
+              <div class="item"><img src="image/lazada-wallet-icon.png" /></div>
+              <div class="item"><img src="image/lazada-wallet-icon.png" /></div>
+              <div class="item"><img src="image/lazada-wallet-icon.png" /></div>
+              <div class="item"><img src="image/lazada-wallet-icon.png" /></div>
+              <div class="item"><img src="image/lazada-wallet-icon.png" /></div>
+              <div class="item"><img src="image/lazada-wallet-icon.png" /></div>
             </div>
           </div>
         </div>
         <div
-          class="product-container"
+          class="item-container"
           style="--item-width: 5rem; --gap: 0.3rem"
         >
           <span>Payment Methods</span>
           <div class="flex">
             <div class="flex items">
-              <img src="image/lazada-logistics.png" />
-              <img src="image/lazada-logistics.png" />
-              <img src="image/lazada-logistics.png" />
-              <img src="image/lazada-logistics.png" />
-              <img src="image/lazada-logistics.png" />
-              <img src="image/lazada-logistics.png" />
+              <div class="item"><img src="image/lazada-logistics.png" /></div>
+              <div class="item"><img src="image/lazada-logistics.png" /></div>
+              <div class="item"><img src="image/lazada-logistics.png" /></div>
+              <div class="item"><img src="image/lazada-logistics.png" /></div>
+              <div class="item"><img src="image/lazada-logistics.png" /></div>
+              <div class="item"><img src="image/lazada-logistics.png" /></div>
             </div>
           </div>
         </div>
         <div
-          class="product-container"
-          style="--item-per-row: 4; --item-width: 5rem; --gap: 0.1rem"
+          class="item-container"
+          style="--item-width: 6rem; --gap: 0.1rem"
         >
           <span>Payment Methods</span>
           <div class="flex flow">
             <div class="flex items">
-              <img src="image/pcidss.png" />
-              <img src="image/pcidss.png" />
+              <div class="item"><img src="image/pcidss.png" /></div>
+              <div class="item"><img src="image/pcidss.png" /></div>
             </div>
           </div>
         </div>
@@ -534,14 +566,14 @@
           >Lazada Malaysia "(Ecart Services Malaysia Sdn Bhd (983365-K)" is
           pioneering e-commerce across some of the fastest growing countries in
           the world by offering a fast, secure and convenient online shopping
-          experience with a broad product offering in categories ranging from
+          experience with a broad item offering in categories ranging from
           fashion, consumer electronics to household goods, toys and sports
           equipment. Lazada is always striving to offer its customers the best
           possible offering – including multiple payment options, free returns
           and extensive customer service and warranty commitments. We are
-          constantly expanding our product range as well like recently the
+          constantly expanding our item range as well like recently the
           Fashion and Watches category. We offer the best selection of quality
-          products you'll find anywhere all at your fingertips. Online shopping
+          items you'll find anywhere all at your fingertips. Online shopping
           in Malaysia has never been this easy! Stay connected and stay tuned
           for new offers and deals we have from time to time. Remember, everyday
           is a shopping day on Lazada! Last but not the least, we want to
@@ -561,7 +593,7 @@
           produuct through brand, category, or keywords, check out detailed
           descriptions as well as genuine customer reviews to help make purchase
           decisions. On top of that with LazMall, customers are guaranteed 100%
-          Authentic products with 15-days free easy returns.</span
+          Authentic items with 15-days free easy returns.</span
         >
         <span>The Biggest Sales, Best Vouchers & Top Promos</span>
         <span
