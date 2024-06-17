@@ -19,6 +19,7 @@
   --fs-regular-2: 3.2vw;
   --fs-regular-3: 2vw;
   --fs-regular-4: 1vw;
+  --fs-regular-5: 2.66667vw;
 
   --lh-1: 17px;
   --lh-2: 25px;
@@ -462,6 +463,7 @@ p {
   margin: 0.4rem;
 }
 .item-container > * {
+
   flex-basis: 100%;
 }
 .item-container .header > *:nth-child(2) {
@@ -474,8 +476,56 @@ p {
   flex-grow: 1;
 }
 .item-container .items {
-  width: 100%;
+  flex-basis: 100%;
   flex-wrap: wrap;
+}
+.item-container {
+  overflow: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+.items-container--options {
+  flex-wrap: wrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: 5rem;
+  max-width: calc(100vw - var(--scrollbar-width));
+}
+body {
+  --scrollbar-width: calc(100vw - 100%);
+}
+.items-container--options::-webkit-scrollbar-thumb {
+  background-color: var(--clr-brand-pink);
+  border-radius: 5rem;
+}
+.items-container--options::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.items-container--options::-webkit-scrollbar-track-piece {
+  background-color: #0f1568;
+}
+.items-container--options::-webkit-resizer {
+  background-color: #6c1d00;
+}
+.items-container--options::-webkit-scrollbar-track-piece:start {
+  flex-basis: 40%;
+}
+.items-container--options::-webkit-scrollbar-track-piece:end {
+  flex-basis: 40%;
+}
+
+.items-container--options > .items{
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  width: 100%;
+  padding: 1rem;
+}
+.item-container--options > .items > * {
+  flex-basis: 100%;
+}
+.items-container--options > .items > .item {
+  align-items: center;
+  font-size: var(--fs-regular-5);
 }
 /* 
 --item-per-row - The number of items per row, applicable in containers that takes up the entire width
@@ -496,6 +546,7 @@ p {
 .item-container .items > .item {
   flex-direction: column;
   width: 100%;
+  --gap: 1rem;
 }
 
 .item-container .items > .item > * {
