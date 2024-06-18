@@ -21,6 +21,9 @@
   --fs-regular-4: 1vw;
   --fs-regular-5: 2.66667vw;
 
+  --fs-mobile-medium: 4vw;
+  --fs-mobile-small: 2.66667vw;
+
   --lh-1: 17px;
   --lh-2: 25px;
   --lh-3: 1.15;
@@ -31,11 +34,13 @@
   --fw-2: 300;
   --fw-3: 400;
   --fw-4: 500;
+  --fw-5: 700;
 
   --border-radius-1: 5rem;
   --border-radius-2: 3rem;
 
   --clr-gray: #9e9e9e;
+  --clr-gray01: #858b9c;
   --clr-white: #fff;
   --clr-neutral: #f5f5f5;
   --clr-light-gray: #e7e8ec;
@@ -48,6 +53,7 @@
   --clr-light-orange: #ffc3e3;
   --clr-brown: #6c1d00;
   --clr-brand-pink: #fe4960;
+  --clr-light-pink: #ffb6bf;
 }
 *,
 *::before,
@@ -121,6 +127,12 @@ p {
 .fs-7 {
   font-size: min(3vw, 2rem);
 }
+.fs-mobile-medium {
+  font-size: var(--fs-mobile-medium);
+}
+.fs-mobile-small {
+  font-size: var(--fs-mobile-small);
+}
 
 /* Line height */
 .lh-1 {
@@ -150,10 +162,16 @@ p {
 .fw-3 {
   font-weight: 400;
 }
+.fw-4 {
+  font-weight: var(--fw-5);
+}
 
 /* Text color */
 .text-gray {
   color: var(--clr-gray);
+}
+.text-gray01 {
+  color: var(--clr-gray01);
 }
 .text-light-gray {
   color: var(--clr-light-gray);
@@ -179,10 +197,19 @@ p {
 .text-brown {
   color: var(--clr-brown);
 }
+.text-brand-pink {
+  color: var(--clr-brand-pink);
+}
 
 /* Background color */
 .bg-white {
   background-color: var(--clr-white);
+}
+.bg-light-pink {
+  background-color: var(--clr-light-pink);
+}
+.bg-brand-pink {
+  background-color: var(--clr-brand-pink);
 }
 .bg-gray {
   background-color: var(--clr-gray);
@@ -385,6 +412,7 @@ p {
 
 .lazada-promotions > .lazada-more-info > .header {
   align-items: center;
+  flex-direction: row;
 }
 
 .lazada-promotions > .lazada-more-info > .body {
@@ -444,17 +472,27 @@ p {
   width: 100%;
 }
 
-.item-container > *:nth-child(2) {
+.item-container > .item-contents {
   flex-wrap: wrap;
   flex-basis: 100%;
   width: 100%;
 }
-.item-container > *:nth-child(2) > .header {
+.item-container > .item-contents > .header {
   padding: 1rem;
   width: 100%;
   --gap: 1rem;
   border-bottom: 1px solid var(--clr-light-gray);
   align-items: center;
+}
+.item-container > .item-contents--mobile {
+  border-radius: 1rem;
+  margin: 1rem;
+}
+.item-container > .item-contents--mobile > .header > img {
+  flex-basis: 30%;
+}
+.item-container > .item-contents--mobile > .items > .item {
+  margin: 0.7rem;
 }
 .countdown-number {
   background-color: var(--clr-red);
@@ -480,9 +518,10 @@ p {
 }
 .item-container {
   overflow: auto;
-  white-space: nowrap;
-  flex-wrap: nowrap;
-  flex-direction: column;
+  width: 100%;
+}
+.item-container > .item-title {
+  flex-basis: 100%;
 }
 .items-container--options {
   flex-wrap: wrap;
@@ -508,22 +547,23 @@ p {
   align-items: center;
   font-size: var(--fs-regular-5);
 }
-.scroll-container {
-  background-color: var(--clr-light-dark-gray);
-  margin: 1rem 0;
-  right: 50%;
-  width: 5rem;
-  height: 1rem;
-  border-radius: 1rem;
-  border: 1px solid black;
-}
-.scroll-container > .scroll {
-  width: 60%;
-  background-color: var(--clr-brand-pink);
-  height: 100%;
-  border-radius: 1rem;
-}
 
+@media (max-width: 50em) {
+  .scroll-container {
+    margin: 1rem 0;
+    right: 50%;
+    width: 5rem;
+    height: 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+  }
+  .scroll-container > .scroll {
+    width: 60%;
+    background-color: var(--clr-brand-pink);
+    height: 100%;
+    border-radius: 1rem;
+  }
+}
 /* 
 --item-per-row - The number of items per row, applicable in containers that takes up the entire width
 --item-width   - The width of items in the row
@@ -654,4 +694,16 @@ p {
 
 .container--lazada-footer-info > * {
   flex-basis: 100%;
+}
+
+/* Progress Bar*/
+.progress-bar-container {
+  width: 100%;
+  border-radius: 3rem;
+}
+.progress-bar {
+  width: 70%;
+  padding: 0.3rem;
+  border-radius: 3rem;
+  justify-content: center;
 }
