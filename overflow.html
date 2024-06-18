@@ -1,32 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .document {
-            background-color: aliceblue;
-            overflow: auto;
-            white-space: nowrap;
-            min-width: 100%;
-            justify-content: space-between;
-        }
-        li{
-            min-width: 150rem;
-    word-wrap:break-word;
-}
+      .document {
+        background-color: aliceblue;
+        overflow: auto;
+        white-space: nowrap;
+        min-width: 100%;
+        justify-content: space-between;
+      }
+      li {
+        min-width: 150rem;
+        word-wrap: break-word;
+      }
+      .scrollbar-container {
+        width: 5rem;
+        background-color: gray;
+      }
+      .scrollbar {
+        width: 40%;
+        background-color: aqua;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="document">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam ad unde commodi non voluptate magnam voluptates dolorem, illum molestias perferendis inventore dignissimos quidem, quod delectus tempora ab quaerat? Saepe amet dolor nisi iste laudantium, qui reiciendis sunt tenetur maxime obcaecati neque unde voluptatum molestias officia minus provident soluta necessitatibus cumque in consequuntur omnis corporis minima. Optio qui deserunt ea quasi tempora sed at minima distinctio. Eius illo, doloremque tempora officiis harum unde minima tempore cupiditate eligendi similique id, iusto excepturi exercitationem dolor, repellendus sunt! Obcaecati quas, dolore odio iusto quo vel maiores eveniet voluptatibus? Quaerat ab dolorem sapiente accusantium explicabo!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam ad unde
+      commodi non voluptate magnam voluptates dolorem, illum molestias
+      perferendis inventore dignissimos quidem, quod delectus tempora ab
+      quaerat? Saepe amet dolor nisi iste laudantium, qui reiciendis sunt
+      tenetur maxime obcaecati neque unde voluptatum molestias officia minus
+      provident soluta necessitatibus cumque in consequuntur omnis corporis
+      minima. Optio qui deserunt ea quasi tempora sed at minima distinctio. Eius
+      illo, doloremque tempora officiis harum unde minima tempore cupiditate
+      eligendi similique id, iusto excepturi exercitationem dolor, repellendus
+      sunt! Obcaecati quas, dolore odio iusto quo vel maiores eveniet
+      voluptatibus? Quaerat ab dolorem sapiente accusantium explicabo!
     </div>
     <ul>
-        <li>Hello</li>
-        <li>How are you</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ut veniam laboriosam tempora quae dolorum natus soluta iusto quos veritatis ex illo explicabo temporibus, dicta molestiae. Facilis ipsa reiciendis voluptas distinctio. Ullam earum perspiciatis rem autem! Necessitatibus cum accusamus eveniet ducimus dicta officiis tenetur perspiciatis odit quaerat eos dolore, ipsa laborum repellat quas sunt et deserunt rem molestiae sapiente, ipsum magni? Quia dolores nulla repellat, nesciunt excepturi aperiam repudiandae omnis totam impedit magni, illum, sequi repellendus neque deleniti exercitationem tenetur odio. Delectus, repellendus recusandae, reprehenderit praesentium tempora alias saepe consequuntur natus aperiam pariatur voluptas exercitationem perspiciatis voluptates harum, officiis reiciendis!</li>
-        <li>SearchImagesMapsPla yYouTubeNewsGmailDriveMoreCalendarTranslateMobileBooksOffersWalletShoppingBloggerFinancePhotosVideosEvenmore»AccountOptionsSigninSearch...</li>
-        </ul>
-</body>
+      <li>Hello</li>
+      <li>How are you</li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ut
+        veniam laboriosam tempora quae dolorum natus soluta iusto quos veritatis
+        ex illo explicabo temporibus, dicta molestiae. Facilis ipsa reiciendis
+        voluptas distinctio. Ullam earum perspiciatis rem autem! Necessitatibus
+        cum accusamus eveniet ducimus dicta officiis tenetur perspiciatis odit
+        quaerat eos dolore, ipsa laborum repellat quas sunt et deserunt rem
+        molestiae sapiente, ipsum magni? Quia dolores nulla repellat, nesciunt
+        excepturi aperiam repudiandae omnis totam impedit magni, illum, sequi
+        repellendus neque deleniti exercitationem tenetur odio. Delectus,
+        repellendus recusandae, reprehenderit praesentium tempora alias saepe
+        consequuntur natus aperiam pariatur voluptas exercitationem perspiciatis
+        voluptates harum, officiis reiciendis!
+      </li>
+      <li>
+        SearchImagesMapsPla
+        yYouTubeNewsGmailDriveMoreCalendarTranslateMobileBooksOffersWalletShoppingBloggerFinancePhotosVideosEvenmore»AccountOptionsSigninSearch...
+      </li>
+    </ul>
+    <div class="scrollbar-container"><div class="scrollbar">a</div></div>
+  </body>
+  <script>
+    const documentScroll = document.querySelector(".document")
+    const scrollbarContainer = document.querySelector(".scrollbar-container")
+    const scrollbar = document.querySelector(".scrollbar")
+    scrollbar.style.transform = `translateX(0)`
+    const relativeWidthNewScroll =
+      1 -
+      scrollbar.getBoundingClientRect().width /
+        scrollbarContainer.getBoundingClientRect().width
+    const width1 =
+      Math.floor(documentScroll.scrollWidth) - documentScroll.clientWidth
+    documentScroll.addEventListener("scroll", function (e) {
+      const relativeScrollbarPosition =
+        (documentScroll.scrollLeft / width1) * relativeWidthNewScroll
+      console.log(relativeScrollbarPosition)
+      let customScrollPosition =
+        scrollbarContainer.getBoundingClientRect().width *
+        relativeScrollbarPosition
+      let scrollbarPosition = window
+        .getComputedStyle(scrollbar, null)
+        .getPropertyValue("transform")
+        .split(",")[4]
+      scrollbar.style.transform = `translateX(${customScrollPosition}px)`
+    })
+  </script>
 </html>
