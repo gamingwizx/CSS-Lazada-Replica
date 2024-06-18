@@ -105,6 +105,9 @@ body {
 .relative {
   position: relative;
 }
+.sticky {
+  position: sticky;
+}
 
 h1,
 h2,
@@ -292,7 +295,6 @@ p {
   margin-inline: 0;
   padding-inline: 0;
   padding: 1rem;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-basis: 100%;
@@ -313,7 +315,9 @@ p {
 }
 .search {
   --gap: 0;
-  position: relative;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
   flex-grow: 1;
   width: 100%;
 }

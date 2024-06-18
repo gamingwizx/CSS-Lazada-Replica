@@ -1,119 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+				initial-scale=1.0"
+    />
     <style>
-      div.scroller {
-        border: 1px solid black;
-        white-space: nowrap;
-        overflow-x: scroll;
-        overflow-y: hidden;
+      .container {
+        height: 1500px;
       }
-      .element {
-        background-color: yellow;
-        width: 5rem;
-      }
-      .element-container {
-        width: 300px;
-        background-color: gray;
-      }
-      .parent {
-        overflow: auto;
-        white-space: nowrap;
-        width: 25rem;
-      }
-      .hello {
-        width: 25rem;
-        height: 1rem;
-        background-color: aliceblue;
+
+      .sticky {
+        position: sticky;
+        top: 20px;
+        background-color: rgb(32, 165, 20);
+        color: white;
+        padding: 10px;
       }
     </style>
   </head>
+
   <body>
-    <h1>The onscroll Event</h1>
-    <p>Try the scrollbar in div.</p>
-
-    <div class="parent">
-      <div class="content">
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
-        <span class="hello">Hello</span>
+    <div class="container">
+      <p>Please Scroll down</p>
+      <div class="sticky">
+        <p>This div will be fixed after scrolling to it</p>
       </div>
+      <p>
+        Web Design is a field related to designing websites on the Internet.
+        Without a good design, a website fails to perform well and cannot
+        produce a good impact on the user. Design is a creative process that
+        affects the ranking of the brand. A good website design helps to create
+        an engaging online presence that captivates the audience. Each distinct
+        day gives you an opportunity to learn, progress, and do the things that
+        push you toward your goals or that make you satisfied at the end of the
+        day. Web Design helps to make your web pages stand out in terms of
+        design and user experience. It integrates technical and creative skills,
+        by which you can build and maintain web pages very easily.
+      </p>
     </div>
-    <script>
-      let x = 0
-      const element = document.querySelector(".element")
-      const elementParent = document.querySelector(".element-container")
-      const scroller = document.querySelector(".scroller")
-      const scrollerChild = document.querySelector(".scroller-child")
-      let previousPosition
-      element.style.transform = "translateX(0px)"
-      const a = scroller.offsetWidth - scrollerChild.offsetWidth
-      console.log(a)
-      const scrollerWidth = window
-        .getComputedStyle(scroller, null)
-        .getPropertyValue("width")
-      function myFunction() {
-        let testing = scroller.scrollLeft / scroller.scrollWidth
-        let scrollbarPosition = window
-          .getComputedStyle(element, null)
-          .getPropertyValue("transform")
-          .split(",")[4]
-
-        if (previousPosition > scroller.scrollTop)
-          scrollbarPosition = parseInt(scrollbarPosition) - 5
-        else scrollbarPosition = parseInt(scrollbarPosition) + 5
-        document.getElementById("demo").innerHTML = x += 1
-
-        element.style.transform = `translateX(${scrollbarPosition}px)`
-        previousPosition = scroller.scrollTop
-      }
-    </script>
   </body>
 </html>
