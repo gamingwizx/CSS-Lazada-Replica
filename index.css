@@ -81,6 +81,30 @@ body {
   max-width: 60rem;
   margin: 0 auto;
 }
+.container--mobile-navigation {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: 3;
+}
+.container--mobile-navigation > .items {
+  width: 100%;
+  flex-direction: row;
+  padding: 1rem;
+}
+.container--mobile-navigation > .items > .item {
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 10%;
+  padding: 0.2rem;
+  flex-grow: 1;
+}
+.container--mobile-navigation > .items > .item > img {
+  width: 40%;
+}
+.container--mobile-header-merge {
+  flex-direction: column;
+}
 .container--scroll {
   display: flex;
 }
@@ -314,12 +338,16 @@ p {
   width: clamp(6rem, 8vw + 1rem, 13rem);
 }
 .search {
-  --gap: 0;
-  position: sticky;
   top: 0px;
+  position: sticky;
+  --gap: 0;
   z-index: 2;
   flex-grow: 1;
   width: 100%;
+}
+.lazada-search {
+  position: sticky;
+  top: 0px;
 }
 .search > .search-input {
   border: none;
@@ -336,6 +364,28 @@ p {
   -webkit-filter: invert(100%);
   filter: invert(100%);
   padding: 0.6rem;
+}
+.mobile-header {
+  overflow: auto;
+  white-space: nowrap;
+  display: none;
+}
+.mobile-header > .items {
+  padding: 0.5rem 2rem;
+  width: 100%;
+  gap: 2rem;
+}
+.mobile-header::-webkit-scrollbar {
+  display: none;
+}
+.mobile-header > .items > .item {
+  flex-basis: 50%;
+  flex-direction: column;
+  padding: 1rem;
+}
+.mobile-header > .items > .item:active {
+  border: 1px solid var(--clr-brand-pink);
+  padding: 1rem;
 }
 *[isMobile] {
   display: none;
@@ -609,14 +659,11 @@ p {
   }
 }
 .item-container--mobile-header {
-  overflow: auto;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
   flex-wrap: nowrap;
-  position: sticky;
-  top: 5rem;
-  z-index: 2;
+  z-index: 1;
 }
 .item-container--mobile-header::-webkit-scrollbar {
   display: none;
@@ -828,4 +875,9 @@ p {
   height: 5vw;
   border-radius: 3rem;
   justify-content: center;
+}
+.search-container {
+  top: 0px;
+  position: sticky;
+  z-index: 3;
 }
