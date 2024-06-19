@@ -559,7 +559,7 @@ p {
     display: flex;
   }
   .item-container--flash-sale > .item-contents > .items > .item {
-    padding: 1rem;
+    padding: 1vw;
   }
   .item-container--flash-sale > .item-contents > .items > .item > img {
     padding: 0rem;
