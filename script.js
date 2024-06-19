@@ -6,6 +6,12 @@ const mobileHeaderParent = document.querySelector(".lazada-search")
 const search = document.querySelector(".lazada-search")
 const flashSale = document.querySelector(".item-container--flash-sale")
 
+window.addEventListener("resize", function (e) {
+  if (document.body.clientWidth > 800) {
+    mobileHeaders.style.display = "none"
+  }
+})
+
 let observer = new IntersectionObserver(
   (entries) => {
     if (entries[0].isIntersecting) {
